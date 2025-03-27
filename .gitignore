@@ -1,0 +1,33 @@
+# Node.js dependencies
+node_modules/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Logs & Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# TypeScript build files
+*.tsbuildinfo
+
+# Ignore frontend & backend specific files
+mkfrontend/node_modules/
+mkbackend/node_modules/
+mkfrontend/dist/
+mkbackend/dist/
+mkfrontend/.next/
+mkbackend/.next/
+
+# Ignore OS & Editor config files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
