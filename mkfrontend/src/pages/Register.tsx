@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './pagescss/regis.css'
+
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -33,46 +35,19 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h2>📝 สมัครสมาชิก</h2>
-      <form onSubmit={handleRegister}>
-        <input
-          type="text"
-          placeholder="ชื่อ"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-        <input
-          type="email"
-          placeholder="อีเมล"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="text"
-          placeholder="เบอร์โทร"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="รหัสผ่าน"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="ยืนยันรหัสผ่าน" // ✅ ช่องยืนยันรหัสผ่าน
-          value={confirmPassword}
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
-        <button type="submit">📝 สมัครสมาชิก</button>
-      </form>
+    <div className="register-container">
+      <div className="register-form">
+        <h2>📝 สมัครสมาชิก</h2>
+        <form onSubmit={handleRegister}>
+          <input type="text" placeholder="ชื่อ" value={name} onChange={(e) => setName(e.target.value)} required />
+          <input type="email" placeholder="อีเมล" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="text" placeholder="เบอร์โทร" value={phone} onChange={(e) => setPhone(e.target.value)} required />
+          <input type="password" placeholder="รหัสผ่าน" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input type="password" placeholder="ยืนยันรหัสผ่าน" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
+          <button type="submit">📝 สมัครสมาชิก</button>
+        </form>
+      </div>
+      <div className="register-image"></div>
     </div>
   );
 };
