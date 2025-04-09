@@ -15,7 +15,7 @@
     background-size: cover;
     background-position: center;
     filter: brightness(0.4);
-    transition:  3s ease-in-out ;
+    transition:  1s ease-in-out ;
     z-index: 0;
   }
   
@@ -43,8 +43,9 @@
     align-items: center;       
     height: 100%;              
     text-align: center;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: "Sarabun", sans-serif;
     font-weight: 500;
+    font-style: normal;
     font-size: 24px;
   }
   
@@ -138,4 +139,10 @@
 
 .phone span{
   font-size: 30px;
+}
+
+.countview{
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
 }

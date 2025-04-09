@@ -47,5 +47,8 @@
   .service-card p {
     font-size: 14px;
     color: #555;
+    font-family: "Sarabun", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   

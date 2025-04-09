@@ -13,15 +13,17 @@
     text-align: center;
     font-size: 38px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 5px;
     color: #000000;
     font-weight: bold;
   }
     
   .contact-container p{ 
     font-size: 24px;
-    font-family: "Bai Jamjuree", sans-serif;
+    font-family: "Sarabun", sans-serif;
     font-weight: 500;
+    font-style: normal;
+    margin-bottom: 0;
   }
   
   .contact-box {

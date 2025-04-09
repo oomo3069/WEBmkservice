@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import './pagescss/regis.css'
-
+import ImageSlider from '../components/imgslide'
 
 const Register = () => {
   const [name, setName] = useState("");
@@ -47,7 +47,10 @@ const Register = () => {
           <button type="submit">📝 สมัครสมาชิก</button>
         </form>
       </div>
-      <div className="register-image"></div>
+      <div className="register-image">
+        <ImageSlider/>
+      </div>
+      
     </div>
   );
 };

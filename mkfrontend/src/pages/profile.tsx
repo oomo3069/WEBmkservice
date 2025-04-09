@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./pagescss/profile.css";
 
 const Profile = () => {
   const [customer, setCustomer] = useState<any>(null);
@@ -9,8 +10,8 @@ const Profile = () => {
     const fetchProfile = async () => {
       const token = localStorage.getItem("token");
       if (!token) {
-        alert("❌ กรุณาเข้าสู่ระบบก่อน!");
-        navigate("/login"); // 🔄 ถ้าไม่มี Token ให้ไปหน้า Login
+        
+        navigate("/login");
         return;
       }
 
@@ -30,19 +31,30 @@ const Profile = () => {
   }, [navigate]);
 
   const handleLogout = () => {
-    localStorage.removeItem("token"); // 🗑️ ลบ Token ออกจาก localStorage
-    navigate("/login"); // 🔄 กลับไปหน้า Login
+    localStorage.removeItem("token");
+    navigate("/login");
   };
 
-  if (!customer) return <h2>กำลังโหลดข้อมูล...</h2>;
+  if (!customer) return <h2 className="profile-loading">กำลังโหลดข้อมูล...</h2>;
 
   return (
-    <div>
-      <h2>📄 โปรไฟล์ของคุณ</h2>
-      <p>👤 ชื่อ: {customer.name}</p>
-      <p>📧 อีเมล: {customer.email}</p>
-      <p>📞 เบอร์โทร: {customer.phone_number}</p>
-      <button onClick={handleLogout}>🚪 ออกจากระบบ</button>
+    <div className="profile-container">
+      <div className="profile-box">
+        <div className="profile-content">
+          <div className="profile-info">
+            <h2>📄 โปรไฟล์ของคุณ</h2>
+            <p>👤 <strong>ชื่อ:</strong> {customer.name}</p>
+            <p>📧 <strong>อีเมล:</strong> {customer.email}</p>
+            <p>📞 <strong>เบอร์โทร:</strong> {customer.phone_number}</p>
+            <button onClick={handleLogout}>🚪 ออกจากระบบ</button>
+          </div>
+          <div className="profile-image-placeholder">
+            <div className="profile-image-box">
+              <span>รูปโปรไฟล์</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

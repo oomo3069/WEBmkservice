@@ -49,8 +49,8 @@
   
   .register-image {
     flex: 1;
-    background-image: url('/images/your-slide.jpg'); /* เปลี่ยนเป็น path รูปภาพของคุณ */
     background-size: cover;
     background-position: center;
+    
   }
   

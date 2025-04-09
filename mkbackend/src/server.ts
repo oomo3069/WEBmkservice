@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import customerRoutes from './routes/customer.routes';
 import dotenv from 'dotenv';
+import visitorRoutes from "./routes/visitorRoutes";
 
 dotenv.config();
 
@@ -10,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/customers', customerRoutes);
+app.use("/api/visitors", visitorRoutes);
 
 console.log("✅ JWT_SECRET:", process.env.JWT_SECRET);
 

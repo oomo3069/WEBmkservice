@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="nav-center">
           <Link to="/">หน้าแรก</Link>
           <Link to="/service">บริการ</Link>
-          <Link to="/about">เกี่ยวกับเรา</Link>
+          <Link to="/about">เกี่ยวกับ</Link>
           <Link to="/shop">ร้านค้า</Link>
           <Link to="/contact">ติดต่อ</Link>
         </div>
