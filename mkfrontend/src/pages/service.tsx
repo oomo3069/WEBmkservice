@@ -1,5 +1,5 @@
 import "./pagescss/service.css";
-
+import WaveBackground from "../components/wave";
 const services = [
   {
     img: "/images/repair2.jpg",
@@ -50,7 +50,9 @@ const services = [
 
 const Service = () => {
   return (
-    <div className="service-page">
+   
+    <div className="service-page"> 
+    <div><WaveBackground/></div>
       <h1 className="service-title">🧑‍🔧 บริการของเรา</h1>
 
       <div className="service-grid">

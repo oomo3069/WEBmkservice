@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 import "./pagescss/home.css";
 import { Link } from "react-router-dom";
 import VisitorCounter from "../components/visitor";
+import Service from './service.tsx'
+import './pagescss/service.css'
+import About from './about.tsx'
+import './pagescss/about.css'
+import Contact from './contact.tsx'
+import './pagescss/contact.css'
 
 const images = [
   './images/mk1.jpg',
@@ -31,6 +37,7 @@ const Home = () => {
   }, []);
 
   return (
+    <div className="home-page-wrapper">
     <div className="home-container">
       <div className="slideshow-wrapper">
         <div
@@ -65,18 +72,30 @@ const Home = () => {
             </a>
           </div>
 
-          <a className="phone" href="tel:0896645156"><span>📞 &nbsp;</span>ติดต่อ : 089 - 664 - 5156 • ช่างเอ็ม</a>
-          <div className="countview"><VisitorCounter/></div>
+          <a className="phone" href="tel:0896645156">ติดต่อ : 089 - 664 - 5156 • ช่างเอ็ม</a>
+          
         </div>
       
         <div className="feature-boxes">
-          <Link to="/service"><div className="box" style={{ backgroundImage: `url('/images/repair3.jpg')` }}>บริการ</div></Link>
-          <Link to="/shop"><div className="box" style={{ backgroundImage: `url('/images/tukajock.jpg')` }}>ร้านค้า</div></Link>
-          <Link to="/about"><div className="box" style={{ backgroundImage: `url('/images/mk10.jpg')` }}>เกี่ยวกับ</div></Link>
-          <Link to="/contact"><div className="box" style={{ backgroundImage: `url('/images/hcontract.jpg')` }}>ติดต่อ</div></Link>
+        <Link to="/service"><div className="box bg1"><span>บริการ</span></div></Link>
+        <Link to="/shop"><div className="box bg2"><span>ร้านค้า</span></div></Link>
+        <Link to="/about"><div className="box bg3"><span>เกี่ยวกับ</span></div></Link>
+        <Link to="/contact"><div className="box bg4"><span>ติดต่อ</span></div></Link>
         </div>
+
       </div>
     </div>
+          <div className="service-section">
+            <Service />
+          </div>
+          <div className="about-section">
+            <About />
+          </div>
+          <div className="contact-section">
+            <Contact />
+          </div>
+          <div className="countview"><VisitorCounter/></div>
+     </div>
   );
 };
 

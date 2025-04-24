@@ -1,6 +1,6 @@
 .contact-container {
     padding: 80px 10%;
-    background-color: #fff;
+    background-color:#f9f9f9;
     overflow-x: hidden;
     color: #111;
     display: flex;
@@ -11,7 +11,7 @@
   
   .contact-title {
     text-align: center;
-    font-size: 38px;
+    font-size: 48px;
     margin-top: 50px;
     margin-bottom: 5px;
     color: #000000;
@@ -64,3 +64,76 @@
 
   }
   
+  @media (max-width: 1024px) {
+    .contact-title {
+      font-size: 40px;
+    }
+  
+    .contact-container p {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .contact-box h2 {
+      font-size: 24px;
+    }
+  
+    .contact-image {
+      max-width: 100%;
+    }
+  
+    .contact-box .map-container iframe {
+      width: 100%;
+      height: 400px;
+    }
+  }
+  
+  /* 📱 มือถือ / แท็บเล็ตแนวตั้ง */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 36px;
+      margin-top: 30px;
+    }
+  
+    .contact-container {
+      padding: 60px 5%;
+    }
+  
+    .contact-container p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    .contact-box h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+  
+    .contact-image {
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+  
+    .contact-box .map-container iframe {
+      height: 350px;
+    }
+  }
+  
+  /* 📱 มือถือเล็กกว่า 480px */
+  @media (max-width: 480px) {
+    .contact-title {
+      font-size: 28px;
+    }
+  
+    .contact-container p {
+      font-size: 16px;
+    }
+  
+    .contact-box h2 {
+      font-size: 18px;
+    }
+  
+    .contact-box .map-container iframe {
+      height: 300px;
+    }
+  }

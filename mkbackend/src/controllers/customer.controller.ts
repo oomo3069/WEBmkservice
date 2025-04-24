@@ -2,7 +2,8 @@ import { Request, Response ,NextFunction } from "express";
 import bcrypt from "bcryptjs";
 import client from "../config/db";
 import jwt from "jsonwebtoken";
-import crypto from "crypto"; // ✅ ใช้สร้างรหัสผ่านชั่วคราว
+import crypto from "crypto"; 
+import nodemailer from "nodemailer";
 
 export const registerCustomer = async (req: Request, res: Response) => {
   try {
@@ -102,6 +103,4 @@ export const getCustomerProfile = async (req: Request, res: Response) => {
       res.status(500).json({ error: err.message });
   }
 };
-
-
 

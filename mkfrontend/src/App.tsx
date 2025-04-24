@@ -12,6 +12,7 @@ import Service from './pages/service';
 import Shop from './pages/shop';
 import Contact from './pages/contact';
 import Footer from "./components/footer";
+import ResetPassword from "./pages/ResetPassword";
 function App() {
   return (
     <Router>
@@ -26,6 +27,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password/:token" element={<ResetPassword />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
     <Footer/>

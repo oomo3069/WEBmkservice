@@ -44,7 +44,7 @@ const Register = () => {
           <input type="text" placeholder="เบอร์โทร" value={phone} onChange={(e) => setPhone(e.target.value)} required />
           <input type="password" placeholder="รหัสผ่าน" value={password} onChange={(e) => setPassword(e.target.value)} required />
           <input type="password" placeholder="ยืนยันรหัสผ่าน" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required />
-          <button type="submit">📝 สมัครสมาชิก</button>
+          <button type="submit"> สมัครสมาชิก</button>
         </form>
       </div>
       <div className="register-image">

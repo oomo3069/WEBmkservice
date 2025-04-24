@@ -13,15 +13,22 @@ const ImageSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 3000); // เปลี่ยนภาพทุก 3 วิ
+    }, 10000); // เปลี่ยนภาพทุก 3 วิ
 
     return () => clearInterval(timer);
   }, []);
 
   return (
     <div className="slider-container">
-      <img src={images[currentIndex]} alt="slide" className="slider-image" />
-    </div>
+    {images.map((img, index) => (
+      <img
+        key={index}
+        src={img}
+        alt={`slide-${index}`}
+        className={`slider-image ${index === currentIndex ? "active" : ""}`}
+      />
+    ))}
+  </div>
   );
 };
 

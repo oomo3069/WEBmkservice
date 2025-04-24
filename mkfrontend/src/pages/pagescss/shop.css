@@ -1,13 +1,15 @@
 .shop-container {
+    position: relative;
     padding: 80px 10%;
     background-color: #fdfdfd;
     overflow-x: hidden;
     color: #111;
+    overflow-x: hidden;
   }
   
   .shop-title {
     text-align: center;
-    font-size: 38px;
+    font-size: 48px;
     margin-top: 50px;
     margin-bottom: 50px;
     color: #000000;
@@ -56,3 +58,96 @@
     font-style: normal;
   }
   
+  .comming {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* สีดำโปร่งใส */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    flex-direction: column;
+    color: white;
+    text-align: center;
+    backdrop-filter: blur(3px);
+  }
+  
+  .comming h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .comming p {
+    font-size: 1.2rem;
+    color: #f87171; /* สีแดงอ่อน */
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+  /* ---------- Responsive สำหรับ Tablet ---------- */
+@media (max-width: 1024px) {
+  .shop-title {
+    font-size: 36px;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+  }
+
+  .shop-item img {
+    height: 160px;
+  }
+
+  .shop-item h3 {
+    font-size: 18px;
+  }
+
+  .shop-item p {
+    font-size: 14px;
+  }
+}
+
+/* ---------- Responsive สำหรับ Mobile ---------- */
+@media (max-width: 768px) {
+  .shop-container {
+    padding: 50px 5%;
+  }
+
+  .shop-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .shop-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
+
+  .shop-item img {
+    height: 140px;
+  }
+
+  .shop-item h3 {
+    font-size: 16px;
+  }
+
+  .shop-item p {
+    font-size: 13px;
+  }
+
+  .comming h1 {
+    font-size: 2rem;
+  }
+
+  .comming p {
+    font-size: 1rem;
+  }
+}

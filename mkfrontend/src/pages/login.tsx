@@ -5,10 +5,16 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // ✅ เพิ่ม error message
+  const [successMessage, setSuccessMessage] = useState(""); // ✅ เพิ่ม success message (optional)
+
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setErrorMessage(""); // reset ทุกครั้งที่ submit
+    setSuccessMessage("");
+
     const res = await fetch("http://localhost:5000/api/customers/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -18,10 +24,12 @@ const Login = () => {
     const data = await res.json();
     if (res.ok) {
       localStorage.setItem("token", data.token);
-      alert("✅ เข้าสู่ระบบสำเร็จ!");
-      navigate("/profile");
+      setSuccessMessage("✅ เข้าสู่ระบบสำเร็จ!");
+      setTimeout(() => {
+        navigate("/profile");
+      }, 1500); // รอ 1.5 วิ แล้วค่อย navigate
     } else {
-      alert("❌ ล็อกอินไม่สำเร็จ: " + data.error);
+      setErrorMessage(" ล็อกอินไม่สำเร็จ: " + data.error);
     }
   };
 
@@ -45,10 +53,16 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
+          {errorMessage && <div className="error-box">{errorMessage}</div>}
+          {successMessage && <div className="success-box">{successMessage}</div>}
           <button type="submit">เข้าสู่ระบบ</button>
         </form>
+
+       
+        
+
         <button className="forgot-btn" onClick={() => navigate("/forgot-password")}>
-          ❓ ลืมรหัสผ่าน
+           ลืมรหัสผ่าน
         </button>
       </div>
     </div>

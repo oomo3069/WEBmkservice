@@ -1,69 +1,128 @@
 .about-page {
-    padding: 80px 10%;
-    background-color: #fff;
-    color: #111;
-    overflow-x: hidden;
-  }
-  
-  .about-title {
-    text-align: center;
-    font-size: 36px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  
-  .about-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 80px;
-    flex-wrap: wrap;
-    border-radius: 15px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-  }
-  
-  .about-text {
-    flex: 1;
-    padding: 40px;
-    min-width: 280px;
-    margin-top: 0;
-  }
-  
-  .about-text h2{
-    font-size: 36px;
-    margin-bottom: 0;
+  background-color: white;
+  padding: 80px 10%;
+  overflow: hidden;
+  color: #111;
+}
+
+.about-title {
+  text-align: center;
+  font-size: 48px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.about-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  border-radius: 50px 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  flex: 1;
+  padding: 40px;
+  min-width: 280px;
+  margin-top: 0;
+}
+
+.about-text h2 {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.about-text p {
+  font-size: 20px;
+  font-family: "Sarabun", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.about-image {
+  flex: 1;
+  padding: 0;
+  text-align: center;
+  min-width: 280px;
+}
+
+.about-image img {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 10px;
+  border-radius: 50px 10px;
+}
+
+/* 💻 แท็บเล็ตแนวนอน / จอเล็กกว่า 1024px */
+@media (max-width: 1024px) {
+  .about-text h2 {
+    font-size: 32px;
   }
 
-  .about-text p{
-    font-size: 20px;
-    font-family: "Sarabun", sans-serif;
-    font-weight: 500;
-    font-style: normal;
+  .about-text p {
+    font-size: 18px;
   }
 
-  .about-image {
-    flex: 1;
-    padding: 0 ;
-    text-align: center;
-    min-width: 280px;
-  }
-  
   .about-image img {
-    width: 500px;
-    height: 300px; 
-    object-fit: cover; 
-    
-    
+    width: 100%;
   }
-  
-  @media (max-width: 768px) {
-    .about-box {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .about-image img {
-      max-width: 100%;
-    }
+}
+
+/* 📱 มือถือ / แท็บเล็ตแนวตั้ง */
+@media (max-width: 768px) {
+  .about-box {
+    flex-direction: column;
+    text-align: center;
   }
-  
+
+  .about-title {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    padding: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .about-text p {
+    font-size: 16px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 📱 มือถือเล็กกว่า 480px */
+@media (max-width: 480px) {
+  .about-title {
+    font-size: 32px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+  }
+
+  .about-box {
+    margin-bottom: 40px;
+  }
+  .about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 50px 10px;
+  }
+}

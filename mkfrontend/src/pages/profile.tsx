@@ -23,7 +23,13 @@ const Profile = () => {
       if (res.ok) {
         setCustomer(data.customer);
       } else {
-        alert("❌ ดึงข้อมูลไม่สำเร็จ: " + data.error);
+        if (res.status === 401) {
+          alert("❌ Token หมดอายุ กรุณาเข้าสู่ระบบใหม่");
+          localStorage.removeItem("token");
+          navigate("/login");
+        } else {
+          alert("❌ ดึงข้อมูลไม่สำเร็จ: " + data.error);
+        }
       }
     };
 
@@ -46,7 +52,7 @@ const Profile = () => {
             <p>👤 <strong>ชื่อ:</strong> {customer.name}</p>
             <p>📧 <strong>อีเมล:</strong> {customer.email}</p>
             <p>📞 <strong>เบอร์โทร:</strong> {customer.phone_number}</p>
-            <button onClick={handleLogout}>🚪 ออกจากระบบ</button>
+            <button onClick={handleLogout}> ออกจากระบบ</button>
           </div>
           <div className="profile-image-placeholder">
             <div className="profile-image-box">

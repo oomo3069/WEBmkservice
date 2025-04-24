@@ -96,7 +96,6 @@ nav {
     nav {
       grid-template-columns: auto auto;
     }
-  
     .hamburger {
       display: flex;
       justify-self: end;
@@ -104,10 +103,10 @@ nav {
   
     .nav-menu {
       position: absolute;
-      top: 103px;
+      top: 79px;
       left: 0;
       width: 100%;
-      background-color: #a20b0b;
+      background: linear-gradient(to bottom right, #991b1b, #dc2626, #f87171);
       flex-direction: column;
       max-height: 0;
       overflow: hidden;
@@ -135,4 +134,25 @@ nav {
       padding-right: 0;
     }
   }
+  @media (max-width: 768px) {
+    nav {
+      grid-template-columns: auto auto;
+    }
+
   
+    .nav-menu {
+      position: absolute;
+      top: 79px;
+      left: 0;
+    }
+  
+  }
+  @media (max-width: 400px) {
+    .nav-menu {
+      top: 65px;
+    }
+    .nav-left h2{
+      font-size: 24px;
+      margin-left: 0px;
+    }
+  }

@@ -21,7 +21,7 @@ const VisitorCounter = () => {
   return (
     <div className="bg-v">
     <div style={{ textAlign: "center", fontSize: "18px", marginTop: "0" }}>
-      👁️ มีผู้เข้าชมทั้งหมด: <strong>{count}</strong> คน
+       มีผู้เข้าชมทั้งหมด: <strong>{count}</strong> คน
     </div>
     </div>
   );
