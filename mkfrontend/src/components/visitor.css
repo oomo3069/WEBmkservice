@@ -1,6 +1,6 @@
 .bg-v{
     background: linear-gradient(to bottom left, #991b1b, #dc2626, #f34e4e);
-    padding: 10px;
-    border-radius: 0px;
-    width: 200px;
+    padding: 6px;
+    
+    width: 180px;
 }

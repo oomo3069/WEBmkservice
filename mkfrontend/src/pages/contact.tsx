@@ -3,6 +3,7 @@ import "./pagescss/contact.css";
 const Contact = () => {
   return (
     <div className="contact-container">
+      <div className="contract-minibg">
       <h1 className="contact-title">📞 ช่องทางติดต่อเรา</h1>
       <p>ติดต่อเราผ่าน Line ID : หรือ เบอร์โทร : 089 - 664 - 5156</p>
 
@@ -38,6 +39,7 @@ const Contact = () => {
         title="Google Maps"
       ></iframe>
         </div>
+      </div>
       </div>
     </div>
   );

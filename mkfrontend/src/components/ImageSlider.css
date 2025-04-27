@@ -3,7 +3,7 @@
   height: 100%;
   position: relative;
   overflow: hidden;
-  border-radius: 0 10px 10px 0;
+  
 }
 
 .slider-image {
@@ -19,6 +19,6 @@
 
 /* ภาพที่กำลังแสดง */
 .slider-image.active {
-  opacity: 0.9;
+  opacity: 0.7;
   z-index: 1;
 }

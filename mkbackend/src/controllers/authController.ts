@@ -23,9 +23,12 @@ export const forgotPassword = async (req: Request, res: Response) => {
     const result = await client.query("SELECT * FROM customers WHERE email = $1", [email]);
     const user = result.rows[0];
 
-    // สร้าง JWT token ที่หมดอายุภายใน 10 นาที
+    if (!user) {
+       res.status(400).json({ error: "ไม่พบเมล" });
+       return;
+    }
+    
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "10m" });
-
     const resetLink = `http://localhost:5173/reset-password/${token}`;
 
     await transporter.sendMail({
@@ -33,9 +36,14 @@ export const forgotPassword = async (req: Request, res: Response) => {
       subject: "รีเซ็ตรหัสผ่านของคุณ",
       html: `<p>คลิกเพื่อรีเซ็ตรหัสผ่าน: <a href="${resetLink}">${resetLink}</a></p>`,
     });
+
+    // ✅ เพิ่มบรรทัดนี้
+    res.status(200).json({ message: "ส่งลิงก์ไปยังอีเมลแล้ว" });return ;
+
   } catch (err) {
     console.error("Forgot Password Error:", err);
-    res.status(500).json({ error: "เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์" });
+     res.status(500).json({ error: "เกิดข้อผิดพลาดภายในเซิร์ฟเวอร์" });
+     return;
   }
 };
 
