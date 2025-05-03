@@ -1,6 +1,6 @@
 "use client";
 
-import type { Variants } from "motion/react";
+import type { Variants } from "framer-motion";
 import { motion, useAnimation } from "framer-motion";
 
 const pathVariants: Variants = {
