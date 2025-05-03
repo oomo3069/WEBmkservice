@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import "./ImageSlider.css";
 
 const images = [
-  "/images/mk8.jpg",
-  "/images/mk9.jpg",
+  "/img2/mknew16.jpg",
+  "/img2/mknew17.jpg",
+  "/images/mk1.jpg",
+  "/images/mk2.jpg",
   "/images/mk11.jpg",
+  "/images/mk4.jpg",
 ];
 
 const ImageSlider = () => {
@@ -13,7 +16,7 @@ const ImageSlider = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 10000); // เปลี่ยนภาพทุก 3 วิ
+    }, 7000); 
 
     return () => clearInterval(timer);
   }, []);

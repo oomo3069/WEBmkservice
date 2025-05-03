@@ -16,7 +16,7 @@
     background-size: cover;
     background-position: center;
     filter: brightness(0.4);
-    transition:  1s ease-in-out ;
+    transition:  all 1s linear;
     z-index: 0;
   }
   
@@ -74,7 +74,7 @@
   
   .box {
     position: relative;
-    width: 340px;
+    width: 500px;
     height: 120px;
     border: 2px solid white;
     border-radius: 12px;
@@ -110,23 +110,23 @@
   /* พื้นหลังแต่ละกล่อง */
   .bg1::before {
     background-image: url('/images/repair3.jpg');
-    padding: 0px 200px;
+    padding: 0px 350px 0px 200px;
     margin-left: -30px;
     
   }
   .bg2::before {
-    background-image: url('/images/tukajock.jpg');
-    padding: 0px 250px;
+    background-image: url('/img2/mknew5.jpg');
+    padding: 0px 300px 0px 250px;
     margin-left: -30px;
   }
   .bg3::before {
-    background-image: url('/images/mk10.jpg');
-    padding: 0px 200px;
+    background-image: url('/img2/mknew8.jpg');
+    padding: 0px 350px 0px 200px;
     margin-left: -30px;
   }
   .bg4::before {
     background-image: url('/images/hcontract.jpg');
-    padding: 0px 200px;
+    padding: 0px 350px 0px 200px;
     margin-left: -30px;
   }
   
@@ -151,7 +151,7 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 35px;
   
 }
 .b {
@@ -193,7 +193,7 @@
 .phone{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 40px;
   font-size: 42px;
   text-decoration: none; 
   color:white;
@@ -219,6 +219,7 @@
 .service-section {
   margin: 0;
   padding: 0;
+  position: relative;
   
 }
 .about-section {
@@ -231,7 +232,13 @@
   padding: 0;
 
 }
+@media (max-width: 1536px) {
+  .box {
+    width: 340px;
+    height: 120px;
 
+  }
+}
 /* 🔄 ปรับขนาดตัวอักษรและกล่องสำหรับจอแท็บเล็ต */
 @media (max-width: 1024px) {
   .home-container {
@@ -252,7 +259,7 @@
     align-items: center;
     padding: 0 5%;
     color: white;
-    margin-top: 140px;
+    margin-top: 100px;
   }
   
   .welcome-text {
@@ -333,7 +340,7 @@
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   
 }
 .b {
@@ -373,12 +380,10 @@
 }
 
 .phone{
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+
+  margin-top: 30px;
   font-size: 42px;
-  text-decoration: none; 
-  color:white;
+
 }
 
 .phone span{

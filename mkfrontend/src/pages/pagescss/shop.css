@@ -82,8 +82,8 @@
   }
   
   .comming p {
-    font-size: 1.2rem;
-    color: #f87171; /* สีแดงอ่อน */
+    font-size: 24px;
+    color: #ec0909; /* สีแดงอ่อน */
     animation: fadeIn 1.5s ease-in-out;
   }
   

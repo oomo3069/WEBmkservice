@@ -6,36 +6,58 @@
   }
   
   .service-title {
+    position: absolute;
     text-align: center;
-    font-size: 48px;
-    margin-top: 0px;
-    margin-bottom: 50px;
+    font-size: 60px;
+    top: 50px;
+    left: 50%;  
+    transform: translateX(-50%); 
+  
+    font-style: italic;
+  
+    background: linear-gradient(to top, #991b1b, #dc2626, #f87171);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+
   }
+  .service-page p{
+    font-size: 20px;
+    margin-top: 10px;
+    font-family: "Sarabun", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
   
   .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 15px;
+    margin-top: 50px;
   }
   
   .service-card {
     background: white;
-    border-radius: 12px;
+    
     padding: 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.3s ease;
+    height: 320px;
   }
   
   .service-card:hover {
-    transform: translateY(-5px);
+    transform: scale(1.02);
   }
   
   .service-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 10px;
+    
     margin-bottom: 15px;
   }
   
@@ -56,13 +78,26 @@
   
   @media (max-width: 1024px) {
     .service-title {
+      position: relative;
       font-size: 40px;
-      margin-bottom: 40px;
+      margin-bottom: 15px;
+      margin-top: 0px;
+      left:0px;
+      top:0;
+      transform: translateX(0%); 
+    }
+    .service-page p{
+      font-size: 18px;
+      
     }
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 10px;
+      margin-top: 0px;
+    }
+    .service-card{
+      height: 285px;
     }
     .service-card img {
       height: 160px;
@@ -81,16 +116,22 @@
     .service-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      gap: 10px;
     }
     .service-page {
       padding: 5% 5%;
     }
-  
+    .service-card{
+      height: 290px;
+    }
     .service-title {
       font-size: 36px;
-      margin-bottom: 30px;
+      margin-bottom: 10px;
       margin-top: 120px;
+    }
+    .service-page p{
+      font-size: 15px;
+      margin-top:0;
     }
   
     .service-card img {
@@ -98,11 +139,11 @@
     }
   
     .service-card h3 {
-      font-size: 24px;
+      font-size: 18px;
     }
   
     .service-card p {
-      font-size: 16px;
+      font-size: 12px;
     }
   }
   
@@ -117,10 +158,11 @@
   
     .service-title {
       font-size: 32px;
-      margin-bottom: 25px;
       margin-top: 120px;
     }
-  
+    .service-page p{
+      font-size: 12px;
+    }
     .service-card {
       padding: 15px;
     }
@@ -137,4 +179,112 @@
       font-size: 14px;
     }
   }
+  /* example */
+  .example-title { 
+    text-align: center;
+    font-size: 60px;
+    font-style: italic;
+    background: linear-gradient(to top, #991b1b, #dc2626, #f87171);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    letter-spacing: 2px;  
+  }
+  .bgex{
+    background-color: white;
+    width: 100%;
+    padding: 3px 0px;
+    margin-top: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+    
+  }
+  .example-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 25px;
+  }
   
+  .example-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+
+  }
+  
+
+  
+  .example-box img {
+    width: 40%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .example-text {
+    padding: 20px;
+    width: 60%;
+  }
+  
+  .example-text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #111;
+  }
+  
+  .example-text p {
+    font-size: 18px;
+    color: #555;
+    font-family: "Sarabun", sans-serif;
+  }
+  
+  @media (max-width: 1024px) {
+    .example-title {
+      font-size: 40px;
+    }
+    .example-text{
+      margin-left: 20px;
+      
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .example-title {
+      font-size: 36px;
+    }
+    .example-box {
+      flex-direction: column;
+    }
+  
+    .example-box img {
+      width: 100%;
+      height: 200px;
+    }
+  
+    .example-text {
+      width: 80%;
+    }
+  
+    .example-text h3 {
+      font-size: 18px;
+    }
+  
+    .example-text p {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 480px) {
+    .example-title {
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    .example-text h3 {
+      font-size: 16px;
+    }
+  
+  }

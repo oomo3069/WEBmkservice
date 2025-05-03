@@ -7,19 +7,42 @@
 
 .about-title {
   text-align: center;
-  font-size: 48px;
-  margin-top: 50px;
+  font-size: 60px;
+  margin-top: 30px;
   margin-bottom: 50px;
+
+  font-style: italic;
+
+  background: radial-gradient(ellipse at bottom left, #991b1b, #dc2626, #f87171);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: bold;
+  letter-spacing: 2px;
+
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
 }
 
 .about-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 80px;
-  flex-wrap: wrap;
-  border-radius: 50px 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+ 
+  border-radius: 50px 20px;
+  box-shadow: 0 2px 8px  rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
@@ -32,6 +55,7 @@
 .about-text h2 {
   font-size: 36px;
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .about-text p {
@@ -39,13 +63,16 @@
   font-family: "Sarabun", sans-serif;
   font-weight: 500;
   font-style: normal;
+ line-height: 1.5;
 }
 
 .about-image {
   flex: 1;
-  padding: 0;
+  padding: 0 10px 0 0;
   text-align: center;
   min-width: 280px;
+  max-width: 500px;
+  
 }
 
 .about-image img {
@@ -56,8 +83,28 @@
   border-radius: 50px 10px;
 }
 
+.tl{
+  display: inline-block;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  padding: 15px 30px;
+  transition: 2s;
+  text-align: center;
+  text-decoration: none;
+}
+.tl:hover{
+  background-color: #d21414;
+  
+}
+
 /* 💻 แท็บเล็ตแนวนอน / จอเล็กกว่า 1024px */
 @media (max-width: 1024px) {
+  .about-title{
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
   .about-text h2 {
     font-size: 32px;
   }
@@ -65,9 +112,17 @@
   .about-text p {
     font-size: 18px;
   }
-
+  .about-image{
+    min-width: 250px;
+    max-width: 250px;
+  }
   .about-image img {
     width: 100%;
+    height: 250px;
+    width: 250px;
+  }
+  .tl{
+    padding: 10px 20px;
   }
 }
 
@@ -77,7 +132,9 @@
     flex-direction: column;
     text-align: center;
   }
-
+  .about-image{
+    padding-bottom: 8px;
+  }
   .about-title {
     font-size: 40px;
     margin-bottom: 30px;
@@ -97,7 +154,7 @@
 
   .about-image img {
     width: 100%;
-    height: auto;
+    height: 200px;
   }
 }
 
@@ -118,11 +175,17 @@
   .about-box {
     margin-bottom: 40px;
   }
+
   .about-image img {
-    width: 250px;
-    height: 250px;
-    object-fit: cover;
-    margin-top: 10px;
-    border-radius: 50px 10px;
+    min-width: 90px;
+    height: 200px;
+
+  }
+  .about-image{
+    padding: 6px;
+  }
+  .tl{
+    font-size: 12px;
+    padding: 8px 16px;
   }
 }

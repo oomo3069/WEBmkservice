@@ -10,9 +10,13 @@ import Contact from './contact.tsx'
 import './pagescss/contact.css'
 
 const images = [
-  './images/mk1.jpg',
-  './images/mk2.jpg',
-  './images/mk4.jpg'
+  './img2/mknew2.jpg',
+  './img2/mknew11.jpg',
+  './img2/mknew16.jpg',
+  './img2/mknew8.jpg',
+  './img2/mknew21.jpg',
+  './img2/mknew17.jpg',
+  './img2/mknew23.jpg'
 ];
 
 const Home = () => {
@@ -32,7 +36,7 @@ const Home = () => {
     const interval = setInterval(() => {
       setLoaded(false); // reset loading state for fade effect
       setIndex((prev) => (prev + 1) % images.length);
-    }, 10000);
+    }, 7000);
     return () => clearInterval(interval);
   }, []);
 
@@ -55,8 +59,8 @@ const Home = () => {
           <p>ซ่อมกลอนประตู • เปลี่ยนมอเตอร์เซ็นทรัลล็อค • ซ่อมกระจกมองข้าง </p>
           <p>กระจกไม่ทำงาน • เปลี่ยนมอเตอร์กระจกไฟฟ้า • ซ่อมสวิตช์กระจกไฟฟ้า</p>
           <p>ติดตั้งกันขโมย • ฝาท้ายประตู • ติดตั้งกระจกไฟฟ้า และอื่นๆ</p>
-          <p style={{color:"yellow",marginBottom:"0px"}}><i>ร้านเปิดให้บริการทุกวันครับทุกวันครับ</i></p>
-          
+          <p style={{color:"yellow",marginBottom:"0px",marginTop:"35px"}}><i>ร้านเปิดให้บริการทุกวันครับ</i></p>
+          <p style={{color:"yellow",marginBottom:"0px"}}><i>ตรวจเช็คอาการฟรีไม่เสียค่าใช้จ่าย</i></p>
           <div className="contract">
             <a className="b facebook" href="https://www.facebook.com/mirrorssamutprakarn" target="_blank" rel="noopener noreferrer">
               <div className="b facebook">

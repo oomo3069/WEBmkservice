@@ -25,7 +25,7 @@ export default function ForgotPassword() {
         setMessage("ส่งอีเมลรีเซ็ตรหัสผ่านเรียบร้อยแล้ว!");
         setIsSuccess(true);
       } else {
-        setMessage("ไม่สามารถส่งอีเมลได้");
+        setMessage("ไม่เมลนี้ในบัญชี");
         setIsSuccess(false);
       }
     } catch (err) {
