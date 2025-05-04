@@ -393,7 +393,7 @@
 /* 📱 ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
   .home-content{
-    padding: 7% 0;
+    padding: 10% 0;
   }
   .welcome-text {
     font-size: 20px;
@@ -443,7 +443,7 @@
 /* 📱 มือถือเล็กมาก (iPhone SE) */
 @media (max-width: 480px) {
   .home-content{
-    padding: 7% 0;
+    padding: 10% 0;
   }
   .box {
     height: 80px;
