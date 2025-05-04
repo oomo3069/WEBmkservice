@@ -241,14 +241,7 @@
 }
 /* 🔄 ปรับขนาดตัวอักษรและกล่องสำหรับจอแท็บเล็ต */
 @media (max-width: 1024px) {
-  .home-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    overflow-x: hidden;
-  }
-  
+
   .home-content {
     position: relative;
     z-index: 1;
@@ -257,9 +250,8 @@
     display:inline-block;
     justify-content: center;
     align-items: center;
-    padding: 0 5%;
-    color: white;
-    margin-top: 100px;
+    padding: 7% 5%;
+
   }
   
   .welcome-text {
@@ -401,7 +393,7 @@
 /* 📱 ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
   .home-content{
-    padding: 0px;
+    padding: 7% 0;
   }
   .welcome-text {
     font-size: 20px;
@@ -417,6 +409,7 @@
   .welcome-text p {
     font-size: 16px;
     line-height: 1.4;
+    margin: 9px 5px 0 5px;
   }
 
   .box {
@@ -450,7 +443,7 @@
 /* 📱 มือถือเล็กมาก (iPhone SE) */
 @media (max-width: 480px) {
   .home-content{
-    margin-top: 80px;
+    padding: 7% 0;
   }
   .box {
     height: 80px;
@@ -462,7 +455,8 @@
   }
 
   .welcome-text p {
-    font-size: 13px;
+    font-size: 12px;
+    
   }
 
   .b {

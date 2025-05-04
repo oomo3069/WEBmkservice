@@ -10,7 +10,7 @@ const Contact = () => {
       
       <div className="contact-box">
         <h2>Facebook</h2>
-        <p style={{marginTop:"-20px"}}>ฝากติดตามเพจที่ Facebook เพื่อติดตามงานบริการของทางร้าด้วยนะครับขอบคุณครับ</p>
+        <p style={{marginTop:"-20px"}}>ฝากติดตามเพจที่ Facebook เพื่อติดตามงานบริการของทางร้านด้วยนะครับขอบคุณครับ</p>
         <a
           href="https://www.facebook.com/mirrorssamutprakarn"
           target="_blank"
