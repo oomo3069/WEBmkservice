@@ -192,6 +192,8 @@
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     letter-spacing: 2px;  
+    margin: 2% 0;
+    transform: skew(15deg);
   }
   .bgex{
     background-color: white;
@@ -200,7 +202,7 @@
     margin-top: 25px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    
+    transform: skew(-15deg);
     
   }
   .example-grid {
@@ -249,10 +251,7 @@
     .example-title {
       font-size: 40px;
     }
-    .example-text{
-      margin-left: 20px;
-      
-    }
+
   }
   
   /* Responsive */
@@ -270,7 +269,7 @@
     }
   
     .example-text {
-      width: 80%;
+      width: 90%;
     }
   
     .example-text h3 {
@@ -279,6 +278,7 @@
   
     .example-text p {
       font-size: 14px;
+      line-height: 1.2;
     }
   }
   @media (max-width: 480px) {
@@ -287,7 +287,7 @@
       letter-spacing: 1px;
     }
     .example-text h3 {
-      font-size: 16px;
+      font-size: 18px;
     }
   
   }
