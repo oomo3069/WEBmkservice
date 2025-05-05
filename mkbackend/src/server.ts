@@ -8,11 +8,14 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+
 app.use(express.json());
 app.use('/api/customers', customerRoutes);
 app.use("/api/visitors", visitorRoutes);
-
+app.use(cors({
+    origin: "https://mkservice-tpr.vercel.app", // ใส่ URL frontend
+    credentials: true,
+  }));
 
 
 
