@@ -6,11 +6,11 @@ const VisitorCounter = () => {
   useEffect(() => {
     const updateVisitor = async () => {
       
-      await fetch("http://localhost:5000/api/visitors/increment", {
+      await fetch("https://webmkservice.onrender.com/api/visitors/increment", {
         method: "POST",
       });
 
-      const res = await fetch("http://localhost:5000/api/visitors");
+      const res = await fetch("https://webmkservice.onrender.com/api/visitors");
       const data = await res.json();
       setCount(data.count);
     };
