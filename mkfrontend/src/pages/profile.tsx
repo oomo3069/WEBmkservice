@@ -15,7 +15,7 @@ const Profile = () => {
         return;
       }
 
-      const res = await fetch("http://localhost:5000/api/customers/profile", {
+      const res = await fetch("https://webmkservice.onrender.com/api/customers/profile", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
