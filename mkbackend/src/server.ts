@@ -13,9 +13,13 @@ app.use(express.json());
 app.use('/api/customers', customerRoutes);
 app.use("/api/visitors", visitorRoutes);
 app.use(cors({
-    origin: "https://mkservice-tpr.vercel.app", // ใส่ URL frontend
-    credentials: true,
-  }));
+  origin: [
+    "https://mkservice-tpr.vercel.app", // domain เก่า
+    "https://mkservice-gs5msgy8h-oomo3069s-projects.vercel.app" // domain ใหม่ที่ error
+  ],
+  credentials: true
+}));
+
 
 
 
