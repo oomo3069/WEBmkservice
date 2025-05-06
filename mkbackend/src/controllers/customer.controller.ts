@@ -1,6 +1,6 @@
 import { Request, Response ,NextFunction } from "express";
 import bcrypt from "bcryptjs";
-import client from "../config/db";
+import pool from "../config/db";
 import jwt from "jsonwebtoken";
 import crypto from "crypto"; 
 import nodemailer from "nodemailer";
@@ -10,7 +10,7 @@ export const registerCustomer = async (req: Request, res: Response) => {
     const { name, email, phone_number, password, confirmPassword } = req.body;
 
     // ตรวจสอบ email ซ้ำ
-    const checkEmail = await client.query(`SELECT * FROM customers WHERE email = $1`, [email]);
+    const checkEmail = await pool.query(`SELECT * FROM customers WHERE email = $1`, [email]);
     if (checkEmail.rows.length > 0) {
       res.status(400).json({ error: "❌ Email นี้ถูกใช้ไปแล้ว" });
       return;
@@ -33,7 +33,7 @@ export const registerCustomer = async (req: Request, res: Response) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // บันทึกข้อมูลลง Database
-    const result = await client.query(
+    const result = await pool.query(
       `INSERT INTO customers (name, email, phone_number, password) 
       VALUES ($1, $2, $3, $4) RETURNING id, name, email, phone_number, created_at`,
       [name, email, phone_number, hashedPassword]
@@ -50,7 +50,7 @@ export const loginCustomer = async (req: Request, res: Response) => {
     const { email, password } = req.body;
 
     // ค้นหา email ใน database
-    const result = await client.query(`SELECT * FROM customers WHERE email = $1`, [email]);
+    const result = await pool.query(`SELECT * FROM customers WHERE email = $1`, [email]);
     if (result.rows.length === 0) {
       res.status(401).json({ error: "❌ อีเมลนี้ยังไม่ได้สมัครสมาชิก" });
       return;
@@ -88,7 +88,7 @@ export const getCustomerProfile = async (req: Request, res: Response) => {
       console.log("📢 ข้อมูลผู้ใช้จาก JWT:", user);
 
       // ค้นหาข้อมูลลูกค้าจากฐานข้อมูล
-      const result = await client.query(
+      const result = await pool.query(
           `SELECT id, name, email, phone_number, created_at FROM customers WHERE id = $1`,
           [user.id]
       );

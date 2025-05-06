@@ -29,7 +29,7 @@ export const forgotPassword = async (req: Request, res: Response) => {
     }
     
     const token = jwt.sign({ id: user.id }, JWT_SECRET, { expiresIn: "10m" });
-    const resetLink = `http://localhost:5173/reset-password/${token}`;
+    const resetLink = `https://webmkservice.onrender.com/reset-password/${token}`;
 
     await transporter.sendMail({
       to: email,
