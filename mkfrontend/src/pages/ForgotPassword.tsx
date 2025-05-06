@@ -15,7 +15,7 @@ export default function ForgotPassword() {
     setIsSending(true); // ✅ กดปุ่มแล้วให้ disable ทันที
 
     try {
-      const res = await fetch("http://localhost:5000/api/customers/forgot-password", {
+      const res = await fetch("https://webmkservice.onrender.com/api/customers/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

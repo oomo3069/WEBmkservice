@@ -15,7 +15,7 @@ const Login = () => {
     setErrorMessage(""); // reset ทุกครั้งที่ submit
     setSuccessMessage("");
 
-    const res = await fetch("http://localhost:5000/api/customers/login", {
+    const res = await fetch("https://webmkservice.onrender.com/api/customers/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),

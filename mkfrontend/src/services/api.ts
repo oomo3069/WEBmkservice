@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api"; // เปลี่ยนเป็น URL Backend ของคุณ
+const API_URL = "https://webmkservice.onrender.com/api";
 
 // ฟังก์ชันดึงโปรไฟล์
 export const getProfile = async (token: string) => {

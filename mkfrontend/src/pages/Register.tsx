@@ -19,7 +19,7 @@ const Register = () => {
       return;
     }
 
-    const res = await fetch("http://localhost:5000/api/customers/register", {
+    const res = await fetch("https://webmkservice.onrender.com/api/customers/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, phone_number: phone, password, confirmPassword }), // ✅ ส่ง confirmPassword ไปด้วย

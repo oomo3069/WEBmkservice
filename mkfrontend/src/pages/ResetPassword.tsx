@@ -15,7 +15,7 @@ export default function ResetPassword() {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/customers/reset-password/${token}`, {
+      const res = await fetch(`https://webmkservice.onrender.com/api/customers/reset-password/${token}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
