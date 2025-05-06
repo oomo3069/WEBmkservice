@@ -8,10 +8,7 @@ dotenv.config();
 
 const app = express();
 
-
-app.use(express.json());
-app.use('/api/customers', customerRoutes);
-app.use("/api/visitors", visitorRoutes);
+// ✅ ตรงนี้ต้องอยู่ก่อน route ใด ๆ
 app.use(cors({
   origin: [
     "https://mkservice-tpr.vercel.app", // domain เก่า
@@ -20,8 +17,7 @@ app.use(cors({
   credentials: true
 }));
 
+app.use(express.json());
 
-
-
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`✅ Server is running on port ${PORT}`));
+app.use('/api/customers', customerRoutes);
+app.use("/api/visitors", visitorRoutes);
