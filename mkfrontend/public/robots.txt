@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mkservice-tpr.vercel.app/sitemap.xml

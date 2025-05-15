@@ -393,7 +393,7 @@
 /* 📱 ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
   .home-content{
-    padding: 10% 0;
+    padding: 15% 0;
   }
   .welcome-text {
     font-size: 20px;
@@ -418,7 +418,30 @@
     font-size: 18px;
     margin: 0 auto;
   }
-
+  
+  
+ 
+  .bg1::before {
+    background-image: url('/images/repair3.jpg');
+    padding: 50px 60px;
+    margin-left: -30px;
+    
+  }
+  .bg2::before {
+    background-image: url('/images/tukajock.jpg');
+    padding: 50px 60px;
+    margin-left: -30px;
+  }
+  .bg3::before {
+    background-image: url('/images/mk10.jpg');
+    padding: 50px 60px;
+    margin-left: -30px;
+  }
+  .bg4::before {
+    background-image: url('/images/hcontract.jpg');
+    padding: 50px 60px;
+    margin-left: -30px;
+  }
   .feature-boxes {
     align-items: center;
     gap: 15px;
@@ -443,7 +466,7 @@
 /* 📱 มือถือเล็กมาก (iPhone SE) */
 @media (max-width: 480px) {
   .home-content{
-    padding: 10% 0;
+    padding: 15% 0;
   }
   .box {
     height: 80px;
@@ -491,30 +514,7 @@
     text-align: center;
 
   }
-  
-  
-  /* พื้นหลังแต่ละกล่อง */
-  .bg1::before {
-    background-image: url('/images/repair3.jpg');
-    padding: 0px 0px;
-    margin-left: -30px;
-    
-  }
-  .bg2::before {
-    background-image: url('/images/tukajock.jpg');
-    padding: 0px 0px;
-    margin-left: -30px;
-  }
-  .bg3::before {
-    background-image: url('/images/mk10.jpg');
-    padding: 0px 0px;
-    margin-left: -30px;
-  }
-  .bg4::before {
-    background-image: url('/images/hcontract.jpg');
-    padding: 0px 0px;
-    margin-left: -30px;
-  }
+
   
 }
 
