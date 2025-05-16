@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8%;
+    padding: 4% 8% 2% 8%;
     color: white;
   }
   
@@ -235,7 +235,7 @@
 @media (max-width: 1536px) {
   .box {
     width: 340px;
-    height: 120px;
+    height: 110px;
 
   }
 }
@@ -423,23 +423,22 @@
  
   .bg1::before {
     background-image: url('/images/repair3.jpg');
-    padding: 50px 60px;
+    padding: 50px 200px;
     margin-left: -30px;
-    
   }
   .bg2::before {
     background-image: url('/images/tukajock.jpg');
-    padding: 50px 60px;
+    padding: 50px 200px;
     margin-left: -30px;
   }
   .bg3::before {
     background-image: url('/images/mk10.jpg');
-    padding: 50px 60px;
+    padding: 50px 200px;
     margin-left: -30px;
   }
   .bg4::before {
     background-image: url('/images/hcontract.jpg');
-    padding: 50px 60px;
+    padding: 50px 200px;
     margin-left: -30px;
   }
   .feature-boxes {
