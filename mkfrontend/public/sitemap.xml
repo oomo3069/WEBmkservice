@@ -11,6 +11,11 @@
   <loc>https://mkservice-tpr.vercel.app/</loc>
   <lastmod>2025-05-15T15:49:09+00:00</lastmod>
 </url>
-
+<url>
+  <loc>https://mkservice-tpr.vercel.app/about</loc>
+</url>
+<url>
+  <loc>https://mkservice-tpr.vercel.app/service</loc>
+</url>
 
 </urlset>
