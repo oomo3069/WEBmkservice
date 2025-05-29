@@ -148,7 +148,7 @@
   /* 📱 มือถือเล็กกว่า 480px */
   @media (max-width: 480px) {
     .contact-title {
-      font-size: 28px;
+      font-size: 24px;
     }
   
     .contact-container p {

@@ -76,8 +76,8 @@
     position: relative;
     width: 500px;
     height: 120px;
-    border: 2px solid white;
-    border-radius: 12px;
+    border: 1px solid white;
+    
     font-size: 24px;
     color: white;
     text-align: center;
@@ -86,7 +86,7 @@
     overflow: hidden;
   
     /* แปลงเป็นสี่เหลี่ยมด้านขนาน */
-    transform: skew(-20deg);
+    transform: skew(-12deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -102,7 +102,7 @@
     background-position: center;
     background-repeat: no-repeat;
   
-    transform: skew(20deg); /* หักลบ skew */
+    transform: skew(12deg); /* หักลบ skew */
     z-index: 0;
     opacity: 0.9;
   }
@@ -132,7 +132,7 @@
   
   /* หมุนข้อความกลับให้ตรง */
   .box span {
-    transform: skew(20deg);
+    transform: skew(12deg);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -140,7 +140,7 @@
   
   /* เอฟเฟกต์ hover */
   .box:hover {
-    transform: skew(-20deg) scale(1.05);
+    transform: skew(-12deg) scale(1.05);
     color: #ff0000;
     box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
   }
@@ -160,7 +160,6 @@
   gap: 10px;
   color: white;
   padding: 10px 20px;
-  border-radius: 20px 10px;
   font-size: 20px;
   font-weight: bold;
   cursor: pointer;
@@ -318,54 +317,7 @@
     padding: 0px 240px;
     margin-left: -30px;
   }
-  
-  /* เอฟเฟกต์ hover */
-  .box:hover {
-    transform: skew(-20deg) scale(1.05);
-    color: #b91c1c;
-    box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
-  }
-  
-  
 
-.contract{
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-  
-}
-.b {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px 10px;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  text-decoration: none;
-}
-
-.b:hover {
-  transform: scale(1.09);
- 
-}
-
-
-.facebook {
-  background-color: #1877f2; /* สี Facebook */
-}
-
-.line {
-  background-color: #06c755; /* สี Line */
-}
-
-.map {
-  background-color: #ea4335; /* สี Google Map */
-}
 
 .icon {
   font-size: 24px;
@@ -393,7 +345,7 @@
 /* 📱 ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
   .home-content{
-    padding: 15% 0;
+    padding: 20% 0 0 0;
   }
   .welcome-text {
     font-size: 20px;
@@ -465,7 +417,7 @@
 /* 📱 มือถือเล็กมาก (iPhone SE) */
 @media (max-width: 480px) {
   .home-content{
-    padding: 15% 0;
+    padding: 20% 0 0 0;
   }
   .box {
     height: 80px;
@@ -474,6 +426,7 @@
 
   .welcome-text h1 {
     font-size: 24px;
+    
   }
 
   .welcome-text p {
@@ -496,19 +449,12 @@
   .phone span {
     font-size: 20px;
   }
-  .feature-boxes {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin: 50px 20px 0 20px;
-  }
 
   
   .box {
-
-    width: 65px;
-    height: 90px;
-    font-size: 12px;
+    width: 250px;
+    height: 70px;
+    font-size: 18px;
     color: white;
     text-align: center;
 

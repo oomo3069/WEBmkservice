@@ -23,7 +23,7 @@ const Home = () => {
   const [index, setIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
 
-  // 🖼️ preload images
+  
   useEffect(() => {
     images.forEach(src => {
       const img = new Image();
@@ -31,7 +31,7 @@ const Home = () => {
     });
   }, []);
 
-  // 🔁 update slide every 10s
+  
   useEffect(() => {
     const interval = setInterval(() => {
       setLoaded(false); // reset loading state for fade effect
@@ -52,15 +52,15 @@ const Home = () => {
       </div>
 
       <div className="home-content">
-        {/* 👇 ตามเดิมทั้งหมด ไม่ต้องเปลี่ยน */}
+        
         <div className="welcome-text">
           <h1>ยินดีต้อนรับสู่ร้านซ่อมประตูรถยนต์</h1>
           <h1>กลอนประตูรถยนต์กระจกไฟฟ้า</h1>
           <p>ซ่อมกลอนประตู • เปลี่ยนมอเตอร์เซ็นทรัลล็อค • ซ่อมกระจกมองข้าง </p>
           <p>กระจกไม่ทำงาน • เปลี่ยนมอเตอร์กระจกไฟฟ้า • ซ่อมสวิตช์กระจกไฟฟ้า</p>
           <p>ติดตั้งกันขโมย • ฝาท้ายประตู • ติดตั้งกระจกไฟฟ้า และอื่นๆ</p>
-          <p style={{color:"yellow",marginBottom:"0px",marginTop:"35px"}}><i>ร้านเปิดให้บริการทุกวันครับ</i></p>
-          <p style={{color:"yellow",marginBottom:"0px"}}><i>ตรวจเช็คอาการฟรีไม่เสียค่าใช้จ่าย</i></p>
+          <p style={{color:"yellow",marginBottom:"0px",marginTop:"35px",fontWeight:"bold"}}><i>ร้านเปิดให้บริการทุกวันครับ</i></p>
+          <p style={{color:"yellow",marginBottom:"0px",fontWeight:"bold"}}><i>ตรวจเช็คอาการฟรีไม่เสียค่าใช้จ่าย</i></p>
           <div className="contract">
             <a className="b facebook" href="https://www.facebook.com/mirrorssamutprakarn" target="_blank" rel="noopener noreferrer">
               <div className="b facebook">
