@@ -8,7 +8,7 @@ dotenv.config();
 
 const app = express();
 
-// ✅ ตรงนี้ต้องอยู่ก่อน route ใด ๆ
+
 app.use(cors({
   origin: [
     "https://mkservice-tpr.vercel.app", // domain เก่า
