@@ -79,7 +79,7 @@ const Home = () => {
             </a>
           </div>
 
-          <a className="phone" href="tel:0896645156">ติดต่อ : 089 - 664 - 5156 • ช่างเอ็ม</a>
+          <a className="phone" href="tel:0896645156">ติดต่อสอบถามกดเลย ▶ <i> 089 - 664 - 5156 </i> ◀ ช่างเอ็ม</a>
           
           
         </div>

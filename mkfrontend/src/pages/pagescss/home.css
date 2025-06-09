@@ -94,9 +94,6 @@
     cursor: pointer;
     transition: 0.4s ease-in-out;
     overflow: hidden;
-  
-    /* แปลงเป็นสี่เหลี่ยมด้านขนาน */
-    transform: skew(-12deg);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,8 +108,6 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  
-    transform: skew(12deg); /* หักลบ skew */
     z-index: 0;
     opacity: 0.9;
   }
@@ -120,29 +115,23 @@
   /* พื้นหลังแต่ละกล่อง */
   .bg1::before {
     background-image: url('/images/repair3.jpg');
-    padding: 0px 350px 0px 200px;
-    margin-left: -30px;
-    
+
   }
   .bg2::before {
     background-image: url('/img2/mknew5.jpg');
-    padding: 0px 300px 0px 250px;
-    margin-left: -30px;
+
   }
   .bg3::before {
     background-image: url('/img2/mknew8.jpg');
-    padding: 0px 350px 0px 200px;
-    margin-left: -30px;
+
   }
   .bg4::before {
     background-image: url('/images/hcontract.jpg');
-    padding: 0px 350px 0px 200px;
-    margin-left: -30px;
+
   }
   
   /* หมุนข้อความกลับให้ตรง */
   .box span {
-    transform: skew(12deg);
     display: inline-block;
     position: relative;
     z-index: 1;
@@ -150,7 +139,7 @@
   
   /* เอฟเฟกต์ hover */
   .box:hover {
-    transform: skew(-12deg) scale(1.05);
+    transform: scale(1.05);
     color: #ff0000;
     box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
   }
@@ -203,17 +192,13 @@
 .phone{
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  font-size: 42px;
+  margin:30px 0;
+  font-size: 38px;
   text-decoration: none; 
   color:white;
   font-family: "Sarabun", sans-serif;
   font-weight: 700;
   font-style: normal;
-}
-
-.phone span{
-  font-size: 30px;
 }
 
 .countview{
@@ -252,7 +237,7 @@
     line-height: 1;
   }
   .phone{
-    font-size: 36px;
+    font-size: 32px;
   }
 }
 /* 🔄 ปรับขนาดตัวอักษรและกล่องสำหรับจอแท็บเล็ต */
@@ -307,37 +292,14 @@
   
   .box {
     position: relative;
-    width: 400px;
-    height: 100px;
-    font-size: 24px;
+    width: 600px;
+    height: 120px;
+    font-size: 36px;
     color: white;
     text-align: center;
-
+    margin-left: -50px;
   }
   
-  
-  /* พื้นหลังแต่ละกล่อง */
-  .bg1::before {
-    background-image: url('/images/repair3.jpg');
-    padding: 0px 240px;
-    margin-left: -30px;
-    
-  }
-  .bg2::before {
-    background-image: url('/images/tukajock.jpg');
-    padding: 0px 250px;
-    margin-left: -30px;
-  }
-  .bg3::before {
-    background-image: url('/images/mk10.jpg');
-    padding: 0px 240px;
-    margin-left: -30px;
-  }
-  .bg4::before {
-    background-image: url('/images/hcontract.jpg');
-    padding: 0px 240px;
-    margin-left: -30px;
-  }
 
 
 .icon {
@@ -347,7 +309,7 @@
 .phone{
 
   margin-top: 30px;
-  font-size: 42px;
+  font-size: 24px;
 
 }
 
@@ -364,56 +326,35 @@
 /* 📱 ปรับสำหรับมือถือ */
 @media (max-width: 768px) {
   .home-content{
-    padding: 20% 0 0 0;
+    padding: 5% 0 0 0;
   }
   .welcome-text {
-    font-size: 20px;
+    
     max-width: 100%;
+    
   }
 
   .welcome-text h1 {
-    font-size: 32px;
+    font-size: 36px;
     text-align: center;
     line-height: 1;
   }
 
   .welcome-text p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.4;
     margin: 9px 5px 0 5px;
   }
     .yellow-text i{
-      font-size: 18px;
+      font-size: 24px;
     }
   .box {
-    width: 300px;
-    height: 80px;
+    width: 500px;
+    height: 100px;
     font-size: 18px;
     margin: 0 auto;
   }
-  
-  
- 
-  .bg1::before {
-    background-image: url('/images/repair3.jpg');
-    padding: 50px 200px;
-    margin-left: -30px;
-  }
-  .bg2::before {
-    background-image: url('/images/tukajock.jpg');
-    padding: 50px 200px;
-    margin-left: -30px;
-  }
-  .bg3::before {
-    background-image: url('/images/mk10.jpg');
-    padding: 50px 200px;
-    margin-left: -30px;
-  }
-  .bg4::before {
-    background-image: url('/images/hcontract.jpg');
-    padding: 50px 200px;
-    margin-left: -30px;
-  }
+
   .feature-boxes {
     align-items: center;
     gap: 15px;
@@ -428,7 +369,7 @@
   }
 
   .phone {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .phone span {
@@ -445,7 +386,9 @@
     height: 80px;
     font-size: 16px;
   }
-
+.welcome-text{
+  padding: 5px;
+}
   .welcome-text h1 {
     font-size: 24px;
     
@@ -460,21 +403,19 @@
     font-size: 12px;
     padding: 4px 8px;
   }
-.contract{
+  .contract{
   margin-top: 30px;
   gap: 10px;
-}
+  }
   .phone {
-    font-size: 18px;
+    font-size: 16px;
   }
-
-  .phone span {
-    font-size: 20px;
+  .yellow-text i{
+  font-size: 16px;
   }
-
   
   .box {
-    width: 250px;
+    width: 320px;
     height: 70px;
     font-size: 18px;
     color: white;

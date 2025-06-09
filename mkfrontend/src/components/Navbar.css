@@ -52,7 +52,7 @@ nav {
   nav a:hover {
     background-color: white;
     border-radius: 20px 20px 0 0;
-    color: black;
+    color: #991b1b;
     transition: 1s;
   }
   
