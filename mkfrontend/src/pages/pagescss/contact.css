@@ -7,8 +7,8 @@
     background-image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.8)
-    ), url("img2/mknew11.jpg");
-    background-color: #111;
+    ), url("./img2/mknew11.jpg");
+    background-color: #f9f9f9;
     overflow-x: hidden;
     color: #111;
     display: flex;
