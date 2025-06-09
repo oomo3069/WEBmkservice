@@ -1,3 +1,4 @@
+
 import "./pagescss/contact.css";
 
 const Contact = () => {
@@ -9,7 +10,7 @@ const Contact = () => {
 
       
       <div className="contact-box">
-        <h2>Facebook</h2>
+        <h2 style={{color:"#1877f2"}}>Facebook</h2>
         <p style={{marginTop:"-20px"}}>ฝากติดตามเพจที่ Facebook เพื่อติดตามงานบริการของทางร้านด้วยนะครับขอบคุณครับ</p>
         <a
           href="https://www.facebook.com/mirrorssamutprakarn"
@@ -26,7 +27,7 @@ const Contact = () => {
 
       
       <div className="contact-box">
-        <h2>Google Map</h2>
+        <h2 style={{color:"#ea4335"}}>Google Map</h2>
         <p style={{marginTop:"-20px"}}>ลูกค้าสามารถเดินทางมาใช้บริการได้ตาม Google map ครับ</p>
         <div className="map-container">
         <iframe

@@ -46,9 +46,9 @@
   }
   
   @media (max-width: 768px) {
-    .onde {
-      height: 40px;
-      min-height: 40px;
-    }
+.ondebox {
+    margin-left: -50px;
+    margin-top: -50px;
+  }
   }
   

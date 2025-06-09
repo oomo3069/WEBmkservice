@@ -1,6 +1,8 @@
+
 .bg-v{
-    background: linear-gradient(to bottom left, #991b1b, #dc2626, #f34e4e);
+    position: absolute;
+    color: rgb(255, 255, 255);
     padding: 6px;
-    
     width: 180px;
+
 }

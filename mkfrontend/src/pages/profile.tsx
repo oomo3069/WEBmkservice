@@ -41,7 +41,7 @@ const Profile = () => {
     navigate("/login");
   };
 
-  if (!customer) return <h2 className="profile-loading">กำลังโหลดข้อมูล...</h2>;
+  if (!customer) return <div className="pdvh"><h2 className="profile-loading">กำลังโหลดข้อมูล...</h2></div>;
 
   return (
     <div className="profile-container">

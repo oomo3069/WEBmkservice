@@ -59,8 +59,10 @@ const Home = () => {
           <p>ซ่อมกลอนประตู • เปลี่ยนมอเตอร์เซ็นทรัลล็อค • ซ่อมกระจกมองข้าง </p>
           <p>กระจกไม่ทำงาน • เปลี่ยนมอเตอร์กระจกไฟฟ้า • ซ่อมสวิตช์กระจกไฟฟ้า</p>
           <p>ติดตั้งกันขโมย • ฝาท้ายประตู • ติดตั้งกระจกไฟฟ้า และอื่นๆ</p>
-          <p style={{color:"yellow",marginBottom:"0px",marginTop:"35px",fontWeight:"bold"}}><i>ร้านเปิดให้บริการทุกวันครับ</i></p>
-          <p style={{color:"yellow",marginBottom:"0px",fontWeight:"bold"}}><i>ตรวจเช็คอาการฟรีไม่เสียค่าใช้จ่าย</i></p>
+          <div className="yellow-text">
+            <p><i style={{marginTop:"10px"}}>ร้านเปิดให้บริการทุกวันครับ</i></p>
+            <p><i style={{marginBottom:"10px"}}>ตรวจเช็คอาการฟรีไม่เสียค่าใช้จ่าย</i></p>
+          </div>
           <div className="contract">
             <a className="b facebook" href="https://www.facebook.com/mirrorssamutprakarn" target="_blank" rel="noopener noreferrer">
               <div className="b facebook">

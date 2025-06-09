@@ -19,7 +19,7 @@
   .shop-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
+    gap: 10px;
   }
   
   .shop-item {
@@ -76,8 +76,8 @@
   }
   
   .comming h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
     animation: fadeIn 1s ease-in-out;
   }
   
