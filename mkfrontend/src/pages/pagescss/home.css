@@ -15,7 +15,7 @@
     width: 100%;
     background-size: cover;
     background-position: center;
-    filter: brightness(0.4);
+    filter: brightness(0.3);
     transition:  all 1s linear;
     z-index: 0;
   }
@@ -367,7 +367,7 @@
   }
 
   .phone {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .phone span {
