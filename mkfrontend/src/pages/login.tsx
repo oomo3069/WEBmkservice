@@ -2,6 +2,7 @@ import "./pagescss/Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_API_URL + "/api";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,11 +16,12 @@ const Login = () => {
     setErrorMessage(""); // reset ทุกครั้งที่ submit
     setSuccessMessage("");
 
-    const res = await fetch("https://webmkservice.onrender.com/api/customers/login", {
+const res = await fetch(`${API_URL}/customers/login`, {
+    // const res = await fetch("https://webmkservice.onrender.com/api/customers/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
-      credentials: "include"
+      // credentials: "include"
     });
 
     const data = await res.json();

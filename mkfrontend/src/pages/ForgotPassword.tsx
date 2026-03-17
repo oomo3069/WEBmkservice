@@ -1,6 +1,8 @@
 import { useState } from "react";
 import './pagescss/forgot-password.css';
 
+const API_URL = import.meta.env.VITE_API_URL + "/api";
+
 export default function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -15,7 +17,9 @@ export default function ForgotPassword() {
     setIsSending(true); // ✅ กดปุ่มแล้วให้ disable ทันที
 
     try {
-      const res = await fetch("https://webmkservice.onrender.com/api/customers/forgot-password", {
+
+      // const res = await fetch("https://webmkservice.onrender.com/api/customers/forgot-password", {
+      const res = await fetch(`${API_URL}/customers/forgot-password`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

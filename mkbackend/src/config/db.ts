@@ -4,8 +4,12 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: { rejectUnauthorized: false }
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: Number(process.env.DB_PORT),
+  ssl: false // สำคัญ: local ไม่ต้องใช้ ssl
 });
 
 pool.connect()
@@ -13,4 +17,3 @@ pool.connect()
   .catch(err => console.error('Database connection error:', err));
 
 export default pool;
-

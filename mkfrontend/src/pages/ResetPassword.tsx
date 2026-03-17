@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import './pagescss/ResetPassword.css'
+
+const API_URL = import.meta.env.VITE_API_URL + "/api";
+
 export default function ResetPassword() {
   const { token } = useParams();
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [message, setMessage] = useState("");
 
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (password !== confirm) {
@@ -15,7 +19,9 @@ export default function ResetPassword() {
     }
 
     try {
-      const res = await fetch(`https://webmkservice.onrender.com/api/customers/reset-password/${token}`, {
+      // const res = await fetch(`https://webmkservice.onrender.com/api/customers/reset-password/${token}`, {
+     
+      const res = await fetch(`${API_URL}/customers/reset-password/${token}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),

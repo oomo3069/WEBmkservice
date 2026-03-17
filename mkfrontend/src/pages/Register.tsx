@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import './pagescss/regis.css'
 import ImageSlider from '../components/imgslide'
 
+const API_URL = import.meta.env.VITE_API_URL + "/api";
+
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,8 +20,8 @@ const Register = () => {
       alert("❌ รหัสผ่านและยืนยันรหัสผ่านไม่ตรงกัน!");
       return;
     }
-
-    const res = await fetch("https://webmkservice.onrender.com/api/customers/register", {
+    const res = await fetch(`${API_URL}/customers/register`, {
+    // const res = await fetch("https://webmkservice.onrender.com/api/customers/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email, phone_number: phone, password, confirmPassword }), // ✅ ส่ง confirmPassword ไปด้วย

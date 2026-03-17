@@ -2,34 +2,36 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./pagescss/profile.css";
 
+const API_URL = import.meta.env.VITE_API_URL + "/api";
 const Profile = () => {
   const [customer, setCustomer] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      navigate("/login", { replace: true });
+      return;
+    }
+
     const fetchProfile = async () => {
-      const token = localStorage.getItem("token");
-      if (!token) {
-        
-        navigate("/login");
-        return;
-      }
+      try {
+        const res = await fetch(`${API_URL}/customers/profile`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
 
-      const res = await fetch("https://webmkservice.onrender.com/api/customers/profile", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
-      const data = await res.json();
-      if (res.ok) {
-        setCustomer(data.customer);
-      } else {
-        if (res.status === 401) {
-          alert("❌ Token หมดอายุ กรุณาเข้าสู่ระบบใหม่");
+        const data = await res.json();
+        if (res.ok) {
+          setCustomer(data.customer);
+        } else if (res.status === 401) {
           localStorage.removeItem("token");
-          navigate("/login");
-        } else {
-          alert("❌ ดึงข้อมูลไม่สำเร็จ: " + data.error);
+          navigate("/login", { replace: true });
         }
+      } catch (error) {
+        console.error("Error fetching profile:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -41,7 +43,9 @@ const Profile = () => {
     navigate("/login");
   };
 
-  if (!customer) return <div className="pdvh"><h2 className="profile-loading">กำลังโหลดข้อมูล...</h2></div>;
+  if (loading) return <div className="pdvh"><h2 className="profile-loading">กำลังโหลดข้อมูล...</h2></div>;
+  
+  if (!customer) return <div className="pdvh"><h2 className="profile-loading">ไม่พบข้อมูล</h2></div>;
 
   return (
     <div className="profile-container">

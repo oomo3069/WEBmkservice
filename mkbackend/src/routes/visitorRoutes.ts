@@ -16,11 +16,21 @@ router.get("/", async (req, res) => {
 
 router.post("/increment", async (req, res) => {
   try {
-    await pool.query("UPDATE visits SET count = count + 1 WHERE id = 1");
-    res.json({ message: "เพิ่มจำนวนผู้เข้าชมแล้ว" });
-  } catch (err) {
-    console.error("POST /api/visitors/increment error:", err);
-    res.status(500).json({ error: "Internal Server Error" });
+    const result = await pool.query(
+      "UPDATE visits SET count = count + 1 WHERE id = 1 RETURNING count"
+    );
+
+    res.json({
+      message: "เพิ่มจำนวนผู้เข้าชมแล้ว",
+      updated: result.rows
+    });
+
+  } catch (err: any) {
+    console.error("❌ FULL ERROR:", err);
+    res.status(500).json({
+      error: err.message,
+      detail: err
+    });
   }
 });
 
