@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: true,
+  origin: "https://we-bmkservice.vercel.app",
   credentials: true
 }));
 
